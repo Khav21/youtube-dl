@@ -1,5 +1,4 @@
 import re
-
 from .common import InfoExtractor
 
 class ExashareIE(InfoExtractor):
@@ -28,9 +27,11 @@ class ExashareIE(InfoExtractor):
 
         video_url = self._html_search_regex(r'file: "(.+?)"', webpage, u'video URL')
         title =  self._html_search_regex(r'<h4>([^<]+)</h4>', webpage, u'title')
+        thumbmail = self._html_search_regex(r'image: "(.+?)"', webpage, u'thumbnail')
         return [{
             'id':        video_id,
             'url':       video_url,
             'ext':       'mp4',
             'title':     title,
+            'thumbnail': thumbmail,
         }]
