@@ -4,6 +4,17 @@ from .common import InfoExtractor
 
 class ExashareIE(InfoExtractor):
     _VALID_URL = r'http://www\.exashare\.com/(?P<id>[\da-z0-9]{12})'
+    
+    _TESTS = [{
+        'url': 'http://www.exashare.com/kd6t1pr6gmug',
+        'md5': 'd5d4252f80ebeab4dc2d5ceaed1b7970',
+        'info_dict': {
+            'id': 'kd6t1pr6gmug',
+            'ext': 'mp4',
+            'title': 'wildlife sample video',
+            'thumbnail': 'http://vs26.exashare.com:8777/i/05/00000/1cm4kdmtawjk.jpg',
+        },
+    }]
 
     def _real_extract(self, url):
         mobj = re.match(self._VALID_URL, url)
