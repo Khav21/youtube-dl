@@ -6,7 +6,7 @@ class ExashareIE(InfoExtractor):
     
     _TESTS = [{
         'url': 'http://www.exashare.com/kd6t1pr6gmug',
-        'md5': 'd5d4252f80ebeab4dc2d5ceaed1b7970',
+        'md5': '0891494ffb872a7786e12005dfa6e8f2',
         'info_dict': {
             'id': 'kd6t1pr6gmug',
             'ext': 'mp4',
